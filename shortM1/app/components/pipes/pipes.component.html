@@ -1,0 +1,28 @@
+{{ 5 | pow:2}}
+
+<hr>
+
+{{ str }}<br>
+{{ str | uppercase }}<br>
+{{ str | lowercase }}<br>
+{{ str | slice:8:14 | uppercase }}<br>
+
+<hr>
+
+{{ pi }} <br>
+{{ pi | number}} <br>
+{{ pi | number:'3.1-5'}} <br>
+<hr>
+{{per}} <br>
+{{per | percent}} <br>
+<hr>
+
+{{ now }} <br>
+{{ now | date}} <br>
+{{ now | date:'fullDate'}} <br>
+{{ now | date:'shortDate'}} <br>
+{{ now | date:'fullTime'}} <br>
+{{ now | date:'shortTime'}} <br>
+<hr>
+
+{{obj | json}}

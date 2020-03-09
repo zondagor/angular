@@ -1,0 +1,22 @@
+<app-single-user
+  *ngFor="let u of users"
+  [userInput]="u"
+  (deleteMe)="delChildComp($event)"
+></app-single-user>
+
+
+
+
+
+
+
+
+
+<h2>Add user</h2>
+<form #ref="ngForm">
+  <input type="text" name="name" placeholder="name" minlength="3" required ngModel /><br />
+
+  <input type="email" name="email" placeholder="email" email required ngModel /><br />
+
+  <button (click)="onSubmit(ref)">Add user</button>
+</form>

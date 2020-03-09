@@ -1,0 +1,16 @@
+<input type="text" #hash>
+<button (click)="changeHash(hash)">Go</button>
+{{ value }}
+
+<br>
+
+
+{{ secret }}
+<h1 [title]="now">{{title}}</h1>
+
+<button (click)="btClick()">Click me</button>
+<p>{{isCLicked}}</p>
+
+<input type="text" (input)="setName($event)">
+{{ name }}
+

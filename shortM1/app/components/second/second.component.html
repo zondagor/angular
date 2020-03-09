@@ -1,0 +1,60 @@
+<h1 >No way</h1>
+
+
+
+
+
+
+<h1 [class.green-bg]="true">No way</h1>
+
+
+
+
+
+
+
+
+<h1 [ngStyle]="{background: isError? 'red' : 'blue', color: 'green'}">
+  Hello bro
+</h1>
+
+
+
+<h1 [style.background]="'green'" [style.color]="'white'">
+  Hi again
+</h1>
+
+
+
+
+
+<button (click)="changeSwitch(1)">1</button>
+<button (click)="changeSwitch(2)">2</button>
+<button (click)="changeSwitch(3)">3</button>
+<button (click)="changeSwitch('false')">default</button>
+
+
+<div [ngSwitch]="currentSwitch">
+  <p *ngSwitchCase="1">1</p>
+  <p *ngSwitchCase="2">2</p>
+  <p *ngSwitchCase="3">3</p>
+  <p *ngSwitchDefault>default</p>
+</div>
+
+
+
+
+
+
+
+
+
+<h1 *ngIf="vis; else bye">Hello World</h1>
+<ng-template #bye>
+  <h2>Goodbye</h2>
+</ng-template>
+
+
+<ul>
+  <li *ngFor="let person of people; let idx = index">{{ idx }}: {{ person.name }} - {{ person.age }}</li>
+</ul>

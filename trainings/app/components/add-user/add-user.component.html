@@ -1,0 +1,34 @@
+<!-- <input type="text" name="name" [(ngModel)]="name" placeholder="two way binding">
+{{ name }}
+<hr><hr><hr><hr><hr> -->
+
+<form #ref="ngForm">
+  <!-- <input type="text" name="name" placeholder="name" ngModel /><br /> -->
+  <input type="text" name="lastName" required placeholder="lastName" ngModel /><br />
+
+  <input type="text" name="age" placeholder="age" required ngModel /><br />
+
+  <label>male <input type="radio" name="gender" value="male" required ngModel /> </label>
+  <label
+    >female <input type="radio" name="gender" value="female" required ngModel/><br />
+  </label>
+
+  <input type="email" name="email" placeholder="email" email required ngModel/><br />
+
+  <input required
+    type="password"
+    name="password"
+    placeholder="password"
+    ngModel
+  /><br />
+
+  <button (click)="onSubmit(ref)" [disabled]="ref.invalid">register</button>
+</form>
+
+<hr>
+
+<ul>
+  <li *ngFor="let user of users"> {{ user | json }}</li>
+</ul>
+
+

@@ -1,0 +1,30 @@
+<!-- <form #myForm="ngForm" (ngSubmit)="sendForm()"> -->
+<form #myForm="ngForm" (ngSubmit)="sendForm(myForm)">
+  <!-- <label [ngStyle]="{color: nameI.valid? 'black' : 'red'}"> -->
+  <label [ngStyle]="{color: !nameI.valid && nameI.touched? 'red' : 'black'}">
+    Name:
+  </label>
+  <input #nameI="ngModel" type="text" name="name" [(ngModel)]="developer.name" required />
+
+  <label>Email: </label>
+  <input type="email" name="email" [(ngModel)]="developer.email" email />
+
+  <label>Gender: </label>
+  <input type="radio" name="gender" value="male" [(ngModel)]="developer.gender" />
+
+  <label>Gender: </label>
+  <input type="radio" name="gender" value="female" [(ngModel)]="developer.gender" />
+
+  <label>Skills</label>
+  <input type="checkbox" name="js" [(ngModel)]="developer.js" />
+  <input type="checkbox" name="node" [(ngModel)]="developer.node" />
+  <input type="checkbox" name="angular" [(ngModel)]="developer.angular" />
+
+  <select name="position" [(ngModel)]="developer.position">
+    <option value="junior">junior</option>
+    <option value="middle">middle</option>
+    <option value="senior">senior</option>
+  </select>
+
+  <button [disabled]="!myForm.valid">Register</button>
+</form>

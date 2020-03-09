@@ -1,0 +1,47 @@
+<!-- <form #ref="ngForm"> -->
+<form>
+  <input type="text" name="name" placeholder="name" [(ngModel)]="users.name" /><br />
+  <input type="text" name="lastName" placeholder="lastName" [(ngModel)]="users.lastName" /><br />
+
+  <input type="number" name="age" placeholder="age" [(ngModel)]="users.age" /><br />
+
+  <label>male <input type="radio" name="gender" value="male" [(ngModel)]="users.gender" /> </label>
+  <label
+    >female <input type="radio" name="gender" value="female" [(ngModel)]="users.gender" /><br />
+  </label>
+
+  <input type="email" name="email" placeholder="email" [(ngModel)]="users.email" /><br />
+  <input
+    type="password"
+    name="password"
+    placeholder="password"
+    [(ngModel)]="users.password"
+  /><br />
+
+  <button (click)="showForm2()">register</button>
+</form>
+
+<hr />
+
+{{ users | json}}
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <input type="checkbox" name="JS" [(ngModel)]=""><br>
+<input type="checkbox" name="Java" [(ngModel)]=""><br>
+<input type="checkbox" name="php"[(ngModel)]=""><br>
+
+<select name="status" [(ngModel)]="">
+  <option value="junior">junior</option>
+  <option value="middle">middle</option>
+  <option value="senior">senior</option>
+</select><br> -->
